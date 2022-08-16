@@ -3,6 +3,14 @@ import { galleryItems } from "./gallery-items.js";
 
 const gallery = document.querySelector(".gallery");
 // console.log(gallery);
+gallery.insertAdjacentHTML("beforeend", listOfImages);
+
+gallery.addEventListener("click", onBigUrlImageClick);
+
+function onBigUrlImageClick(event) {
+  preventDefault();
+  console.log(event.target);
+}
 
 const listOfElements = (galleryItem) => {
   // return `<li> <img class="image-item" src=${galleryItem.original} alt='${galleryItem.description}' /> </li>`;
@@ -24,6 +32,6 @@ const listOfElements = (galleryItem) => {
 const listOfImages = galleryItems.map(listOfElements).join("");
 
 // console.log(listOfImages);
-gallery.insertAdjacentHTML("beforeend", listOfImages);
-console.log(gallery);
+
+// console.log(gallery);
 // console.log(galleryItems);
