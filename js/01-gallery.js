@@ -20,7 +20,7 @@ const listOfElements = (galleryItem) => {
 `;
 };
 
-const listOfImages = galleryItems.map(listOfElements).join("");
+const listOfImages = galleryItems.map(listOfElements);
 
 gallery.insertAdjacentHTML("beforeend", listOfImages);
 console.log(gallery);
