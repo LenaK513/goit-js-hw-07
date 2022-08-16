@@ -20,9 +20,10 @@ const listOfElements = (galleryItem) => {
 `;
 };
 
+// console.log(listOfElements);
 const listOfImages = galleryItems.map(listOfElements).join("");
 
-console.log(listOfImages);
-// gallery.insertAdjacentHTML("beforeend", listOfImages);
-// console.log(gallery);
+// console.log(listOfImages);
+gallery.insertAdjacentHTML("beforeend", listOfImages);
+console.log(gallery);
 // console.log(galleryItems);
