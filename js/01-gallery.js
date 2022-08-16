@@ -17,11 +17,11 @@ const listOfElements = (galleryItem) => {
 `;
 };
 
+gallery.insertAdjacentHTML("beforeend", listOfImages);
 // console.log(listOfElements);
 const listOfImages = galleryItems.map(listOfElements).join("");
 const gallery = document.querySelector(".gallery");
 // console.log(gallery);
-gallery.insertAdjacentHTML("beforeend", listOfImages);
 
 gallery.addEventListener("click", onBigUrlImageClick);
 
