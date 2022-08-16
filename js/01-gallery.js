@@ -1,6 +1,14 @@
 import { galleryItems } from "./gallery-items.js";
 // Change code below this line
 
+const gallery = document.querySelector(".gallery");
+gallery.addEventListener("click", onBigUrlImageClick);
+
+function onBigUrlImageClick(event) {
+  // preventDefault();
+  console.log(event.target);
+}
+
 const listOfElements = (galleryItem) => {
   // return `<li> <img class="image-item" src=${galleryItem.original} alt='${galleryItem.description}' /> </li>`;
   return `
@@ -20,12 +28,5 @@ const listOfElements = (galleryItem) => {
 gallery.insertAdjacentHTML("beforeend", listOfImages);
 // console.log(listOfElements);
 const listOfImages = galleryItems.map(listOfElements).join("");
-const gallery = document.querySelector(".gallery");
+
 // console.log(gallery);
-
-gallery.addEventListener("click", onBigUrlImageClick);
-
-function onBigUrlImageClick(event) {
-  preventDefault();
-  console.log(event.target);
-}
