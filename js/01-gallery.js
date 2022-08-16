@@ -8,7 +8,7 @@ const listOfElements = (galleryItem) => {
   return `<li> <img class="image-item" src=${galleryItem.original} alt='${galleryItem.description}' /> </li>`;
 };
 
-const listOfImages = images.map(listOfElements).join("");
+const listOfImages = galleryItems.map(listOfElements).join("");
 
 gallery.insertAdjacentHTML("beforeend", listOfImages);
 console.log(gallery);
