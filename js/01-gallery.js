@@ -3,10 +3,6 @@ import { galleryItems } from "./gallery-items.js";
 
 const gallery = document.querySelector(".gallery");
 
-const listOfImages = galleryItems.map(listOfElements).join("");
-
-gallery.insertAdjacentHTML("beforeend", listOfImages);
-
 gallery.addEventListener("click", onBigUrlImageClick);
 
 function onBigUrlImageClick(event) {
@@ -28,3 +24,7 @@ const listOfElements = (galleryItem) => {
 </div>
 `;
 };
+
+const listOfImages = galleryItems.map(listOfElements).join("");
+
+gallery.insertAdjacentHTML("beforeend", listOfImages);
