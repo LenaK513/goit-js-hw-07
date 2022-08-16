@@ -7,7 +7,7 @@ const listOfElements = (galleryItem) => {
 <a class="gallery__link" href="large-image.jpg">
   <img
     class="gallery__image"
-    rel=«lightbox»
+    
     src="${galleryItem.preview}"
     data-source="${galleryItem.original}"
     alt='${galleryItem.description}'
