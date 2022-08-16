@@ -5,7 +5,19 @@ const gallery = document.querySelector(".gallery");
 // console.log(gallery);
 
 const listOfElements = (galleryItem) => {
-  return `<li> <img class="image-item" src=${galleryItem.original} alt='${galleryItem.description}' /> </li>`;
+  // return `<li> <img class="image-item" src=${galleryItem.original} alt='${galleryItem.description}' /> </li>`;
+  `
+<div class="gallery__item">
+<a class="gallery__link" href="large-image.jpg">
+  <img
+    class="gallery__image"
+    src="${galleryItem.preview}"
+    data-source="large-image.jpg"
+    alt='${galleryItem.description}'
+  />
+</a>
+</div>
+`;
 };
 
 const listOfImages = galleryItems.map(listOfElements).join("");
