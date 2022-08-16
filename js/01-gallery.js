@@ -2,6 +2,8 @@ import { galleryItems } from "./gallery-items.js";
 // Change code below this line
 
 const gallery = document.querySelector(".gallery");
+gallery.insertAdjacentHTML("beforeend", listOfImages);
+
 gallery.addEventListener("click", onBigUrlImageClick);
 
 function onBigUrlImageClick(event) {
@@ -25,7 +27,6 @@ const listOfElements = (galleryItem) => {
 `;
 };
 
-gallery.insertAdjacentHTML("beforeend", listOfImages);
 // console.log(listOfElements);
 const listOfImages = galleryItems.map(listOfElements).join("");
 
