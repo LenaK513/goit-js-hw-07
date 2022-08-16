@@ -7,6 +7,7 @@ const listOfElements = (galleryItem) => {
 <a class="gallery__link" href="large-image.jpg">
   <img
     class="gallery__image"
+    rel=«lightbox»
     src="${galleryItem.preview}"
     data-source="${galleryItem.original}"
     alt='${galleryItem.description}'
@@ -25,5 +26,5 @@ gallery.addEventListener("click", onBigUrlImageClick);
 
 function onBigUrlImageClick(event) {
   event.preventDefault();
-  console.dir(event.target.dataset);
+  console.log(event.target);
 }
