@@ -6,7 +6,7 @@ const gallery = document.querySelector(".gallery");
 
 const listOfElements = (galleryItem) => {
   // return `<li> <img class="image-item" src=${galleryItem.original} alt='${galleryItem.description}' /> </li>`;
-  `
+  return `
 <div class="gallery__item">
 <a class="gallery__link" href="large-image.jpg">
   <img
@@ -20,8 +20,9 @@ const listOfElements = (galleryItem) => {
 `;
 };
 
-const listOfImages = galleryItems.map(listOfElements);
+const listOfImages = galleryItems.map(listOfElements).join("");
 
-gallery.insertAdjacentHTML("beforeend", listOfImages);
-console.log(gallery);
+console.log(listOfImages);
+// gallery.insertAdjacentHTML("beforeend", listOfImages);
+// console.log(gallery);
 // console.log(galleryItems);
