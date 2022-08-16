@@ -24,6 +24,6 @@ gallery.insertAdjacentHTML("beforeend", listOfImages);
 gallery.addEventListener("click", onBigUrlImageClick);
 
 function onBigUrlImageClick(event) {
-  preventDefault();
+  event.preventDefault();
   console.log(event.target.img.data);
 }
