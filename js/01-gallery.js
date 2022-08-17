@@ -32,7 +32,7 @@ function onBigUrlImageClick(event) {
   event.preventDefault();
   lightbox.classList.add("active");
   const imgEl = document.createElement("img");
-  imgEl.src = "${galleryItem.original}";
+  imgEl.src = `${galleryItem.original}`;
 
   // console.log(event.target.dataset);
 }
