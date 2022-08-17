@@ -23,6 +23,7 @@ const gallery = document.querySelector(".gallery");
 gallery.insertAdjacentHTML("beforeend", listOfImages);
 
 gallery.addEventListener("click", onLightboxOpenBigImg);
+gallery.addEventListener("click", onLightboxCloseBigImg);
 
 const imgEl = document.querySelector("#img");
 
