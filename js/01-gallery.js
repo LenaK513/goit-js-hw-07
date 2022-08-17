@@ -29,15 +29,13 @@ lightbox.id = "lightbox";
 document.body.appendChild(lightbox);
 
 galleryItems.forEach((galleryItem) => {
-  galleryItem.addEventListener("click", onBigUrlImageClick);
+  galleryItem.addEventListener("click", (event) => {
+    event.preventDefault();
+    lightbox.classList.add("active");
+    const imgEl = document.createElement("img");
+    imgEl.scr = galleryItem.original;
+    lightbox.appendChild(img);
+
+    // console.log(event.target.dataset);
+  });
 });
-
-function onBigUrlImageClick(event) {
-  event.preventDefault();
-  lightbox.classList.add("active");
-  const imgEl = document.createElement("img");
-  imgEl.scr = galleryItem.original;
-  lightbox.appendChild(img);
-
-  // console.log(event.target.dataset);
-}
