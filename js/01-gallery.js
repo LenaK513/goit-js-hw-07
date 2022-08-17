@@ -36,7 +36,7 @@ gallery.addEventListener("click", onLightboxOpenBigImg);
 const imgEl = document.querySelector("#img");
 
 function onLightboxOpenBigImg(event) {
-  event.preventDefault();
+  // event.preventDefault();
   lightbox.classList.add("active");
   imgEl.src = event.target.dataset.source;
   console.log(event.target.dataset);
