@@ -30,7 +30,6 @@ const lightbox = basicLightbox.create(
 
 `
 );
-return lightbox;
 
 gallery.addEventListener("click", onBigUrlImageClick);
 
