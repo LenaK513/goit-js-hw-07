@@ -24,16 +24,6 @@ gallery.insertAdjacentHTML("beforeend", listOfImages);
 
 gallery.addEventListener("click", onBigUrlImageClick);
 
-import * as basicLightbox from "basiclightbox";
-
-// const modalWindow = basicLightbox.create(`
-//     <div class="modal">
-//     <img src="assets/images/image.png" width="800" height="600">
-//     </div>
-// `);
-
-// ModalWindow.show();
-
 function onBigUrlImageClick(event) {
   event.preventDefault();
   console.log(event.target.dataset.sourse);
