@@ -22,7 +22,11 @@ const gallery = document.querySelector(".gallery");
 
 gallery.insertAdjacentHTML("beforeend", listOfImages);
 
-// gallery.addEventListener("click", onBigUrlImageClick);
+gallery.addEventListener("click", onBigUrlImageClick);
+
+function onBigUrlImageClick(event) {
+  console.log(event.target.dataset);
+}
 
 // const lightbox = document.createElement("div");
 // lightbox.id = "lightbox";
