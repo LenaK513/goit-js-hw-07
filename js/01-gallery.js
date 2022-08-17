@@ -19,12 +19,12 @@ const listOfElements = (galleryItem) => {
 const listOfImages = galleryItems.map(listOfElements).join("");
 
 const gallery = document.querySelector(".gallery");
-const overlay = document.querySelector("#overlay");
+
 const imgEl = document.querySelector("#img");
 gallery.insertAdjacentHTML("beforeend", listOfImages);
 
 gallery.addEventListener("click", onLightboxOpenBigImg);
-overlay.addEventListener("click", onLightboxCloseBigImg);
+gallery.addEventListener("click", onLightboxCloseBigImg);
 
 function onLightboxOpenBigImg(event) {
   event.preventDefault();
@@ -34,7 +34,7 @@ function onLightboxOpenBigImg(event) {
 }
 
 function onLightboxCloseBigImg() {
-  overlay.classList.remove("active");
+  lightbox.classList.remove("active");
   imgEl.src = "";
 }
 
