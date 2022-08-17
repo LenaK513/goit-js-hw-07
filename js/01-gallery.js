@@ -23,7 +23,7 @@ const gallery = document.querySelector(".gallery");
 gallery.insertAdjacentHTML("beforeend", listOfImages);
 
 gallery.addEventListener("click", onLightboxOpenBigImg);
-gallery.addEventListener("click", onLightboxCloseBigImg);
+// gallery.addEventListener("click", onLightboxCloseBigImg);
 
 const imgEl = document.querySelector("#img");
 
@@ -33,7 +33,7 @@ function onLightboxOpenBigImg(event) {
   imgEl.src = event.target.dataset.source;
 }
 
-function onLightboxCloseBigImg() {
-  lightbox.classList.remove("active");
-  imgEl.src = "";
-}
+// function onLightboxCloseBigImg() {
+//   lightbox.classList.remove("active");
+//   imgEl.src = "";
+// }
