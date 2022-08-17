@@ -25,16 +25,20 @@ gallery.insertAdjacentHTML("beforeend", listOfImages);
 const lightbox = basicLightbox.create(
   `
     <div id="lightbox">
-       <img src="" alt="">
+       <img id="img" src="" alt="">
     </div>
 
 `
 );
 
-gallery.addEventListener("click", onBigUrlImageClick);
+gallery.addEventListener("click", onLightboxOpenBigImg);
 
-function onBigUrlImageClick(event) {
+const imgEl = document.querySelector("#img");
+
+function onLightboxOpenBigImg(event) {
   event.preventDefault();
+  lightbox.classList.add("active");
+  imgEl.src = event.target.dataset.source;
   console.log(event.target.dataset);
 }
 
