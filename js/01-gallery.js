@@ -26,9 +26,13 @@ gallery.addEventListener("click", onBigUrlImageClick);
 
 import * as basicLightbox from "basiclightbox";
 
-const Lightbox = basicLightbox.create(document.querySelector(".overlay"));
+// const modalWindow = basicLightbox.create(`
+//     <div class="modal">
+//     <img src="assets/images/image.png" width="800" height="600">
+//     </div>
+// `);
 
-Lightbox.show();
+// ModalWindow.show();
 
 function onBigUrlImageClick(event) {
   event.preventDefault();
