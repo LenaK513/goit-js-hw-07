@@ -24,7 +24,13 @@ gallery.insertAdjacentHTML("beforeend", listOfImages);
 
 gallery.addEventListener("click", onBigUrlImageClick);
 
+import * as basicLightbox from "basiclightbox";
+
+const Lightbox = basicLightbox.create(document.querySelector(".overlay"));
+
+Lightbox.show();
+
 function onBigUrlImageClick(event) {
   event.preventDefault();
-  console.log(event.target.dataset);
+  console.log(event.target.dataset.sourse);
 }
