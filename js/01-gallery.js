@@ -29,11 +29,11 @@ const imgEl = document.querySelector("#img");
 
 function onLightboxOpenBigImg(event) {
   event.preventDefault();
-  lightbox.classList.add("active");
+  body.classList.add("active");
   imgEl.src = event.target.dataset.source;
 }
 
 function onLightboxCloseBigImg() {
-  lightbox.classList.remove("active");
+  body.classList.remove("active");
   imgEl.src = "";
 }
