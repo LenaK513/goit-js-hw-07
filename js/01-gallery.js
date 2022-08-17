@@ -23,8 +23,9 @@ const gallery = document.querySelector(".gallery");
 gallery.insertAdjacentHTML("beforeend", listOfImages);
 
 gallery.addEventListener("click", onLightboxOpenBigImg);
-// gallery.addEventListener("click", onLightboxCloseBigImg);
+overlay.addEventListener("click", onLightboxCloseBigImg);
 
+const overlay = document.querySelector("#overlay");
 const imgEl = document.querySelector("#img");
 
 function onLightboxOpenBigImg(event) {
@@ -34,10 +35,10 @@ function onLightboxOpenBigImg(event) {
   console.log("click on photo");
 }
 
-// function onLightboxCloseBigImg() {
-//   lightbox.classList.remove("active");
-//   imgEl.src = "";
-// }
+function onLightboxCloseBigImg() {
+  overlay.classList.remove("active");
+  imgEl.src = "";
+}
 
 // {/* <div class="lightbox js-lightbox">
 // <div class="lightbox__overlay"></div>
