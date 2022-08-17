@@ -19,14 +19,12 @@ const listOfElements = (galleryItem) => {
 const listOfImages = galleryItems.map(listOfElements).join("");
 
 const gallery = document.querySelector(".gallery");
-
+const overlay = document.querySelector("#overlay");
+const imgEl = document.querySelector("#img");
 gallery.insertAdjacentHTML("beforeend", listOfImages);
 
 gallery.addEventListener("click", onLightboxOpenBigImg);
 overlay.addEventListener("click", onLightboxCloseBigImg);
-
-const overlay = document.querySelector("#overlay");
-const imgEl = document.querySelector("#img");
 
 function onLightboxOpenBigImg(event) {
   event.preventDefault();
