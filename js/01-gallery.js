@@ -22,16 +22,6 @@ const gallery = document.querySelector(".gallery");
 
 gallery.insertAdjacentHTML("beforeend", listOfImages);
 
-import * as basicLightbox from "basiclightbox";
-const lightbox = basicLightbox.create(
-  `
-    <div id="lightbox">
-       <img id="img" src="" alt="">
-    </div>
-
-`
-);
-
 gallery.addEventListener("click", onLightboxOpenBigImg);
 
 const imgEl = document.querySelector("#img");
