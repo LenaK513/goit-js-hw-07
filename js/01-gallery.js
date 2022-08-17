@@ -30,5 +30,8 @@ function onLightboxOpenBigImg(event) {
   event.preventDefault();
   lightbox.classList.add("active");
   imgEl.src = event.target.dataset.source;
-  // console.log(event.target.dataset);
+}
+
+function onLightboxCloseBigImg() {
+  lightbox.classList.remove("active");
 }
