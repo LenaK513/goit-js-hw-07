@@ -24,7 +24,15 @@ gallery.insertAdjacentHTML("beforeend", listOfImages);
 
 gallery.addEventListener("click", onBigUrlImageClick);
 
+const lightbox = document.createElement("div");
+lightbox.id = "lightbox";
+document.body.appendChild(lightbox);
+
 function onBigUrlImageClick(event) {
   event.preventDefault();
-  console.log(event.target.dataset);
+  lightbox.classList.add("active");
+  const imgEl = document.createElement("img");
+  imgEl.src = "${galleryItem.original}";
+
+  // console.log(event.target.dataset);
 }
