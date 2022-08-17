@@ -57,4 +57,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: scale(1);
+}
+
+#img {
+  transform: scale(0.9);
+  transition: transform 250ms, opacity 250ms, scale 250ms;
 }
