@@ -27,7 +27,7 @@ gallery.addEventListener("click", onLightboxOpenBigImg);
 // gallery.addEventListener("click", onLightboxCloseBigImg);
 
 const lightbox = basicLightbox.create(`
-    <img src="" alt="">
+    <img src="" alt="${galleryItem.description}">
 `);
 
 // instance.show();
