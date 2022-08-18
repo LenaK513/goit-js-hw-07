@@ -21,16 +21,15 @@ const listOfImages = galleryItems.map(listOfElements).join("");
 const gallery = document.querySelector(".gallery");
 
 const imgEl = document.querySelector("#img");
+
 gallery.insertAdjacentHTML("beforeend", listOfImages);
+
+const lightbox = basicLightbox.create(`
+    <img src="" alt="">
+`);
 
 gallery.addEventListener("click", onLightboxOpenBigImg);
 // gallery.addEventListener("click", onLightboxCloseBigImg);
-
-const lightbox = basicLightbox.create(`
-    <img src="" alt="${galleryItem.description}">
-`);
-
-// instance.show();
 
 function onLightboxOpenBigImg(event) {
   event.preventDefault();
