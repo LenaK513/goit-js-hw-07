@@ -30,8 +30,8 @@ const modal = basicLightbox.create(`
 function show(event) {
   event.preventDefault();
   const imgEl = document.querySelector("#image");
-  imgEl.src = event.target.dataset.sourse;
   console.log(event.target.dataset.sourse);
+  imgEl.src = event.target.dataset.sourse;
 }
 
 modal.show();
