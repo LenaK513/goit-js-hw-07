@@ -20,23 +20,22 @@ const listOfImages = galleryItems.map(listOfElements).join("");
 
 const gallery = document.querySelector(".gallery");
 
-const imgEl = document.querySelector("#img");
-
 gallery.insertAdjacentHTML("beforeend", listOfImages);
 
 const lightbox = basicLightbox.create(`
     <img src="" alt="">
 `);
+return lightbox;
 
 gallery.addEventListener("click", onLightboxOpenBigImg);
 // gallery.addEventListener("click", onLightboxCloseBigImg);
 
-function onLightboxOpenBigImg(event) {
-  event.preventDefault();
-  lightbox.classList.add("active");
-  imgEl.src = event.target.dataset.source;
-  console.log("click on photo");
-}
+// function onLightboxOpenBigImg(event) {
+//   event.preventDefault();
+//   lightbox.classList.add("active");
+//   imgEl.src = event.target.dataset.source;
+//   console.log("click on photo");
+// }
 
 // function onLightboxCloseBigImg() {
 //   lightbox.classList.remove("active");
