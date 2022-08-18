@@ -22,8 +22,8 @@ const gallery = document.querySelector(".gallery");
 
 gallery.insertAdjacentHTML("beforeend", listOfImages);
 
-const instance = basicLightbox.create(`
-    <img src='event.target.dataset.source' >
+const modal = basicLightbox.create(`
+    <img src="" alt="" >
 `);
 
-instance.show();
+modal.show();
