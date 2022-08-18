@@ -21,18 +21,8 @@ const listOfImages = galleryItems.map(listOfElements).join("");
 const gallery = document.querySelector(".gallery");
 
 gallery.insertAdjacentHTML("beforeend", listOfImages);
-gallery.addEventListener("click", show);
+gallery.addEventListener("click", onBigImageClick);
 
-const modal = basicLightbox.create(`
-   return
-<img id="image" src=" " alt="" >
-`);
-
-function show(event) {
-  event.preventDefault();
-  const imgEl = document.querySelector("#image");
+function onBigImageClick(event) {
   console.log(event.target.dataset.sourse);
-  imgEl.src = event.target.dataset.sourse;
 }
-
-modal.show();
