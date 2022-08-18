@@ -26,8 +26,4 @@ const modal = basicLightbox.create(`
     <img id="image" src="" alt="" >
 `);
 
-// modal.show();
-
-document.querySelector("gallery").forEach((element) => {
-  console.log(element);
-});
+modal.show();
