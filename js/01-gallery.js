@@ -23,7 +23,11 @@ const gallery = document.querySelector(".gallery");
 gallery.insertAdjacentHTML("beforeend", listOfImages);
 
 const modal = basicLightbox.create(`
-    <img src="${galleryItem.preview}" alt="" >
+    <img id="image" src="" alt="" >
 `);
 
-modal.show();
+// modal.show();
+
+document.querySelector("gallery").forEach((element) => {
+  console.log(element);
+});
