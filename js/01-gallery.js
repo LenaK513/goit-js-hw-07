@@ -24,7 +24,13 @@ const imgEl = document.querySelector("#img");
 gallery.insertAdjacentHTML("beforeend", listOfImages);
 
 gallery.addEventListener("click", onLightboxOpenBigImg);
-gallery.addEventListener("click", onLightboxCloseBigImg);
+// gallery.addEventListener("click", onLightboxCloseBigImg);
+
+const lightbox = basicLightbox.create(`
+    <img src="" alt="">
+`);
+
+// instance.show();
 
 function onLightboxOpenBigImg(event) {
   event.preventDefault();
@@ -33,10 +39,10 @@ function onLightboxOpenBigImg(event) {
   console.log("click on photo");
 }
 
-function onLightboxCloseBigImg() {
-  lightbox.classList.remove("active");
-  imgEl.src = "";
-}
+// function onLightboxCloseBigImg() {
+//   lightbox.classList.remove("active");
+//   imgEl.src = "";
+// }
 
 // {/* <div class="lightbox js-lightbox">
 // <div class="lightbox__overlay"></div>
