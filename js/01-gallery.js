@@ -28,5 +28,5 @@ gallery.addEventListener("click", onBigImageClick);
 function onBigImageClick(event) {
   event.preventDefault();
 
-  console.log(event.target.dataset.sourse);
+  img.src = event.target.dataset.sourse;
 }
