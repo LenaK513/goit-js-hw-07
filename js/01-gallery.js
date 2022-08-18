@@ -24,7 +24,7 @@ gallery.insertAdjacentHTML("beforeend", listOfImages);
 gallery.addEventListener("click", show);
 
 const modal = basicLightbox.create(`
-    <img id="image" src="" alt="" >
+    <img id="image" src=" " alt="" >
 `);
 
 function show(event) {
