@@ -26,4 +26,10 @@ const modal = basicLightbox.create(`
     <img id="image" src="" alt="" >
 `);
 
+function show(event) {
+  event.preventDefault();
+  const imgEl = document.querySelector("#img");
+  imgEl.src = event.target.dataset.sourse;
+}
+
 modal.show();
