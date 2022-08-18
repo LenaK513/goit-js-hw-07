@@ -30,6 +30,7 @@ function show(event) {
   event.preventDefault();
   const imgEl = document.querySelector("#img");
   imgEl.src = event.target.dataset.sourse;
+  console.log(event.target.dataset.sourse);
 }
 
 modal.show();
