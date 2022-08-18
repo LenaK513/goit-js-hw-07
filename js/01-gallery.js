@@ -23,7 +23,7 @@ const gallery = document.querySelector(".gallery");
 gallery.insertAdjacentHTML("beforeend", listOfImages);
 
 const instance = basicLightbox.create(`
-    <img src="assets/images/image.png" width="800" height="600">
+    <img src='event.target.dataset.source' >
 `);
 
 instance.show();
