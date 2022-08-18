@@ -23,7 +23,7 @@ const gallery = document.querySelector(".gallery");
 gallery.insertAdjacentHTML("beforeend", listOfImages);
 gallery.addEventListener("click", onBigImageClick);
 
-const imgEl = document.querySelector("img");
+const imgEl = document.querySelector(".gallery__image");
 
 function onBigImageClick(event) {
   event.preventDefault();
