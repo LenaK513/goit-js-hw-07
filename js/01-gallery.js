@@ -21,30 +21,3 @@ const listOfImages = galleryItems.map(listOfElements).join("");
 const gallery = document.querySelector(".gallery");
 
 gallery.insertAdjacentHTML("beforeend", listOfImages);
-
-const lightbox = basicLightbox.create(`
-    <img src="" alt="">
-`);
-return lightbox;
-
-gallery.addEventListener("click", onLightboxOpenBigImg);
-// gallery.addEventListener("click", onLightboxCloseBigImg);
-
-// function onLightboxOpenBigImg(event) {
-//   event.preventDefault();
-//   lightbox.classList.add("active");
-//   imgEl.src = event.target.dataset.source;
-//   console.log("click on photo");
-// }
-
-// function onLightboxCloseBigImg() {
-//   lightbox.classList.remove("active");
-//   imgEl.src = "";
-// }
-
-// {/* <div class="lightbox js-lightbox">
-// <div class="lightbox__overlay"></div>
-
-// <div class="lightbox__content">
-//   <img class="lightbox__image" src="" alt="" />
-// </div> */}
