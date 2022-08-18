@@ -23,9 +23,11 @@ const gallery = document.querySelector(".gallery");
 gallery.insertAdjacentHTML("beforeend", listOfImages);
 gallery.addEventListener("click", onBigImageClick);
 
+const imgEl = document.querySelector("#img");
+
 function onBigImageClick(event) {
   event.preventDefault();
-  const imgEl = document.querySelector("#img");
+
   imgEl.src = event.target.dataset.sourse;
   console.log(imgEl);
 }
