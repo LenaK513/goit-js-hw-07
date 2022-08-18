@@ -21,6 +21,7 @@ const listOfImages = galleryItems.map(listOfElements).join("");
 const gallery = document.querySelector(".gallery");
 
 gallery.insertAdjacentHTML("beforeend", listOfImages);
+gallery.addEventListener("click", show);
 
 const modal = basicLightbox.create(`
     <img id="image" src="" alt="" >
