@@ -28,5 +28,11 @@ function onBigUrlImageClick(event) {
   event.preventDefault();
 
   console.log(event.target.dataset.source);
+
+  const instance = basicLightbox.create(`
+    <img src="${event.target.dataset.source}" >
+`);
+
+  instance.show();
 }
 //
