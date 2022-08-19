@@ -9,7 +9,7 @@ const listOfElements = (galleryItem) => {
     class="gallery__image"
     
     src="${galleryItem.preview}"
-    data-source=${galleryItem.original}
+    data-source='${galleryItem.original}'
     alt='${galleryItem.description}'
   />
 </a>
