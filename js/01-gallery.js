@@ -35,17 +35,17 @@ function onBigUrlImageClick(event) {
 `);
 
   instance.show();
+
+  function onEscapeButtonEvent(event) {
+    window.removeEventListener("keydown", onEscapeButtonEvent);
+    console.log(event.code);
+    if (event.code === "Escape") {
+      instance.close();
+    }
+  }
 }
 //
 // function onBigUrlImageClickClose() {
 
 //   instance.close();
 // }
-
-function onEscapeButtonEvent(event) {
-  window.removeEventListener("keydown", onEscapeButtonEvent);
-  console.log(event.code);
-  if (event.code === "Escape") {
-    instance.close();
-  }
-}
