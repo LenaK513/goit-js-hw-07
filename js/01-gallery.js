@@ -35,11 +35,15 @@ function onBigUrlImageClick(event) {
 `);
 
   instance.show();
-}
-//
-function onModalClose(event) {
-  console.log(event.code);
+
   if (event.code === "Escape") {
     instance.close();
   }
 }
+//
+// function onModalClose(event) {
+//   console.log(event.code);
+//   if (event.code === "Escape") {
+//     instance.close();
+//   }
+// }
