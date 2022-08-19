@@ -21,21 +21,18 @@ const listOfImages = galleryItems.map(listOfElements).join("");
 const gallery = document.querySelector(".gallery");
 
 gallery.insertAdjacentHTML("beforeend", listOfImages);
+console.log(gallery);
 
-// const imgEl = document.querySelector(".gallery__image");
+gallery.addEventListener("click", onBigImageClick);
 
 function onBigImageClick(event) {
   event.preventDefault();
-  console.dir(event.target.dataset.sourse);
-  console.log(event.target.dataset.sourse);
+
   const imageBig = event.target.dataset.sourse;
-  console.log(imageBig);
 
   const instance = basicLightbox.create(`
-  <img src= '${imageBig}' >
+  <img src = "${imageBig}" >
 `);
 
   instance.show();
 }
-
-gallery.addEventListener("click", onBigImageClick);
