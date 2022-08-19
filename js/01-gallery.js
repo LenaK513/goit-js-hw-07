@@ -31,7 +31,7 @@ function onBigImageClick(event) {
   const imageBig = event.target.dataset.sourse;
 
   const instance = basicLightbox.create(`
-  <img src= 'imageBig' >
+  <img src= '${imageBig}' >
 `);
 
   instance.show();
