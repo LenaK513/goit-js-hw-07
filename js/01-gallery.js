@@ -36,3 +36,8 @@ function onBigUrlImageClick(event) {
   instance.show();
 }
 //
+function onModalClose(event) {
+  if (event.code === "Escape") {
+    instance.close();
+  }
+}
