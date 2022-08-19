@@ -23,7 +23,7 @@ const gallery = document.querySelector(".gallery");
 gallery.insertAdjacentHTML("beforeend", listOfImages);
 
 gallery.addEventListener("click", onBigUrlImageClick);
-// gallery.addEventListener("click", onModalClose);
+gallery.addEventListener("click", onModalClose);
 
 function onBigUrlImageClick(event) {
   event.preventDefault();
@@ -37,9 +37,9 @@ function onBigUrlImageClick(event) {
   instance.show();
 }
 //
-// function onModalClose(event) {
-//   console.log(event.code);
-//   if (event.code === "Escape") {
-//     instance.close();
-//   }
-// }
+function onModalClose(event) {
+  console.log(event.type);
+  if (event.type === "Escape") {
+    instance.close();
+  }
+}
