@@ -28,17 +28,13 @@ gallery.addEventListener("click", onModalClose);
 function onBigUrlImageClick(event) {
   event.preventDefault();
 
-  console.log(event.target.dataset.source);
+  console.dir(event);
 
   const instance = basicLightbox.create(`
     <img src="${event.target.dataset.source}" >
 `);
 
   instance.show();
-
-  if (event.code === "Escape") {
-    instance.close();
-  }
 }
 //
 // function onModalClose(event) {
