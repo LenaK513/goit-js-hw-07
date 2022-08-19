@@ -26,13 +26,13 @@ gallery.addEventListener("click", onBigImageClick);
 // const imgEl = document.querySelector(".gallery__image");
 
 function onBigImageClick(event) {
-  event.preventDefault();
+  // event.preventDefault();
 
   // img.src = event.target.dataset.sourse;
 
   const instance = basicLightbox.create(`
   <img src='${event.target.dataset.sourse}' >
 `);
-
+  console.log(img);
   instance.show();
 }

@@ -43,7 +43,7 @@
   cursor: zoom-in;
 }
 
-#lightbox {
+/* #lightbox {
   position: fixed;
   z-index: 100;
   top: 0;
@@ -63,4 +63,4 @@
 #img {
   transform: scale(0.9);
   transition: transform 250ms, opacity 250ms, scale 250ms;
-}
+} */
