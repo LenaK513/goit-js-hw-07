@@ -23,9 +23,9 @@ const gallery = document.querySelector(".gallery");
 gallery.insertAdjacentHTML("beforeend", listOfImages);
 
 gallery.addEventListener("click", onBigUrlImageClick);
-gallery.addEventListener("click", onModalClose);
 
 function onBigUrlImageClick(event) {
+  window.addEventListener("keydown", onEscapeButtonEvent);
   event.preventDefault();
 
   console.dir(event);
@@ -37,9 +37,14 @@ function onBigUrlImageClick(event) {
   instance.show();
 }
 //
-function onModalClose(event) {
-  console.log(event.type);
-  if (event.type === "Escape") {
-    instance.close();
+function onBigUrlImageClickClose() {
+  window.removeEventListener("keydown", onEscapeButtonEvent);
+  instance.close();
+}
+
+function onEscapeButtonEvent(event) {
+  console.log(event.code);
+  if (event.code === "Escape") {
+    onBigUrlImageClickClose();
   }
 }
