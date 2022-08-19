@@ -21,7 +21,7 @@ const listOfImages = galleryItems.map(listOfElements).join("");
 const gallery = document.querySelector(".gallery");
 
 gallery.insertAdjacentHTML("beforeend", listOfImages);
-console.log(gallery);
+console.dir(gallery);
 
 gallery.addEventListener("click", onBigImageClick);
 
