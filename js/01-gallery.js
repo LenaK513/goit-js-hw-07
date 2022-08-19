@@ -27,8 +27,8 @@ gallery.addEventListener("click", onBigImageClick);
 
 function onBigImageClick(event) {
   event.preventDefault();
-  console.dir(event);
-
+  console.dir(event.target.dataset.sourse);
+  console.log(event.target.dataset.sourse);
   const imageBig = event.target.dataset.sourse;
   console.log(imageBig);
 
