@@ -27,5 +27,5 @@ gallery.addEventListener("click", onBigUrlImageClick);
 function onBigUrlImageClick(event) {
   event.preventDefault();
 
-  console.div(event);
+  console.dir(event);
 }
