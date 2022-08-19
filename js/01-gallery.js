@@ -4,12 +4,12 @@ import { galleryItems } from "./gallery-items.js";
 const listOfElements = (galleryItem) => {
   return `
 <div class="gallery__item">
-<a class="gallery__link" href="large-image.jpg">
+<a class="gallery__link" href="${galleryItem.original}">
   <img
     class="gallery__image"
     
     src="${galleryItem.preview}"
-    data-source='${galleryItem.original}'
+    data-source='large-image.jpg'
     alt='${galleryItem.description}'
   />
 </a>
