@@ -33,6 +33,6 @@ function onBigImageClick(event) {
   const instance = basicLightbox.create(`
   <img src= 'imageBig' >
 `);
-  console.log(img);
+
   instance.show();
 }
