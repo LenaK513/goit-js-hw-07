@@ -22,15 +22,15 @@ const gallery = document.querySelector(".gallery");
 
 gallery.insertAdjacentHTML("beforeend", listOfImages);
 
+const instance = basicLightbox.create(`
+    <img src = "${galleryItem.original}" >
+  `);
+
+instance.show();
+
 gallery.addEventListener("click", onBigImageClick);
 
 function onBigImageClick(event) {
   event.preventDefault();
   console.log(event.target.dataset.sourse);
-
-  //   const instance = basicLightbox.create(`
-  //   <img src = "${imageBig.src}" >
-  // `);
-
-  //   instance.show();
 }
