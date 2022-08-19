@@ -21,17 +21,18 @@ const listOfImages = galleryItems.map(listOfElements).join("");
 const gallery = document.querySelector(".gallery");
 
 gallery.insertAdjacentHTML("beforeend", listOfImages);
-console.dir(gallery);
 
 gallery.addEventListener("click", onBigImageClick);
+
+const imageBig = document.querySelector("img");
 
 function onBigImageClick(event) {
   event.preventDefault();
 
-  const imageBig = event.target.dataset.sourse;
+  imageBig.src = event.target.dataset.sourse;
 
   const instance = basicLightbox.create(`
-  <img src = "${imageBig}" >
+  <img src = "${imageBig.src}" >
 `);
 
   instance.show();
