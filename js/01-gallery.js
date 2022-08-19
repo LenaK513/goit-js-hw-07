@@ -25,7 +25,7 @@ gallery.insertAdjacentHTML("beforeend", listOfImages);
 gallery.addEventListener("click", onBigImageClick);
 
 const imageBig = document.querySelector("img");
-console.log(imageBig);
+console.dir(imageBig);
 
 function onBigImageClick(event) {
   event.preventDefault();
