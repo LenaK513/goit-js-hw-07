@@ -30,7 +30,7 @@ console.dir(imageBig);
 function onBigImageClick(event) {
   event.preventDefault();
 
-  imageBig.src = event.target.dataset.sourse;
+  imageBig.src = event.dataset.sourse;
 
   const instance = basicLightbox.create(`
   <img src = "${imageBig.src}" >
