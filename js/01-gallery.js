@@ -21,7 +21,6 @@ const listOfImages = galleryItems.map(listOfElements).join("");
 const gallery = document.querySelector(".gallery");
 
 gallery.insertAdjacentHTML("beforeend", listOfImages);
-gallery.addEventListener("click", onBigImageClick);
 
 // const imgEl = document.querySelector(".gallery__image");
 
@@ -38,3 +37,5 @@ function onBigImageClick(event) {
 
   instance.show();
 }
+
+gallery.addEventListener("click", onBigImageClick);
