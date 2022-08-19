@@ -23,6 +23,7 @@ const gallery = document.querySelector(".gallery");
 gallery.insertAdjacentHTML("beforeend", listOfImages);
 
 gallery.addEventListener("click", onBigUrlImageClick);
+gallery.addEventListener("click", onModalClose);
 
 function onBigUrlImageClick(event) {
   event.preventDefault();
