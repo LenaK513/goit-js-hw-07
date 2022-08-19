@@ -23,3 +23,10 @@ const gallery = document.querySelector(".gallery");
 gallery.insertAdjacentHTML("beforeend", listOfImages);
 
 console.log(gallery);
+gallery.addEventListener("click", onBigUrlImageClick);
+
+function onBigUrlImageClick(event) {
+  event.preventDefault();
+
+  console.log(event.target.dataset.sourse);
+}
