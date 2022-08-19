@@ -24,12 +24,10 @@ gallery.insertAdjacentHTML("beforeend", listOfImages);
 
 gallery.addEventListener("click", onBigImageClick);
 
-const imageBig = document.querySelector("img");
-console.dir(imageBig);
-
 function onBigImageClick(event) {
   event.preventDefault();
-
+  const imageBig = document.querySelector(".gallery__image");
+  console.dir(imageBig);
   imageBig.src = event.target.dataset.sourse;
 
   const instance = basicLightbox.create(`
