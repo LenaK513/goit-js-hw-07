@@ -25,7 +25,6 @@ gallery.insertAdjacentHTML("beforeend", listOfImages);
 gallery.addEventListener("click", onBigUrlImageClick);
 
 function onBigUrlImageClick(event) {
-  window.addEventListener("keydown", onEscapeButtonEvent);
   event.preventDefault();
 
   console.dir(event);
@@ -34,18 +33,15 @@ function onBigUrlImageClick(event) {
     <img src="${event.target.dataset.source}" >
 `);
 
-  instance.show();
+  instance.show(window.addEventListener("keydown", onEscapeButtonEvent));
 
   function onEscapeButtonEvent(event) {
-    window.removeEventListener("keydown", onEscapeButtonEvent);
     console.log(event.code);
     if (event.code === "Escape") {
-      instance.close();
+      instance.close(
+        window.removeEventListener("keydown", onEscapeButtonEvent)
+      );
     }
   }
 }
 //
-// function onBigUrlImageClickClose() {
-
-//   instance.close();
-// }
