@@ -36,11 +36,10 @@ function onBigUrlImageClick(event) {
   instance.show(window.addEventListener("keydown", onEscapeButtonEvent));
 
   function onEscapeButtonEvent(event) {
+    window.removeEventListener("keydown", onEscapeButtonEvent);
     console.log(event.code);
     if (event.code === "Escape") {
-      instance.close(
-        window.removeEventListener("keydown", onEscapeButtonEvent)
-      );
+      instance.close();
     }
   }
 }
