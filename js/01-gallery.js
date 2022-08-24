@@ -30,23 +30,25 @@ function onBigUrlImageClick(event) {
 
   console.dir(event);
 
-  const instance = basicLightbox
-    .create(
-      `
+  const instance = basicLightbox.create(
+    `
     <img src="${event.target.dataset.source}" >
 `,
-      {
-        onShow: (instance) => {
-          window.addEventListener("keydown", onEscapeButtonEvent);
-        },
-      }
-    )
-    .show();
-
-  // instance;
+    {
+      onShow: (instance) => {
+        window.addEventListener("keydown", onEscapeButtonEvent);
+      },
+    },
+    {
+      onClose: (instance) => {
+        window.removeEventListener("keydown", onEscapeButtonEvent);
+      },
+    }
+  );
+  instance.show();
 
   function onEscapeButtonEvent(event) {
-    window.removeEventListener("keydown", onEscapeButtonEvent);
+    // window.removeEventListener("keydown", onEscapeButtonEvent);
     console.log(event.code);
     if (event.code === "Escape") {
       instance.close();
