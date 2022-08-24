@@ -35,12 +35,12 @@ function onBigUrlImageClick(event) {
     <img src="${event.target.dataset.source}" >
 `,
     {
-      onShow: (instance) => {
+      onShow: () => {
         window.addEventListener("keydown", onEscapeButtonEvent);
       },
     },
     {
-      onClose: (instance) => {
+      onClose: () => {
         window.removeEventListener("keydown", onEscapeButtonEvent);
       },
     }
