@@ -45,13 +45,13 @@ function onBigUrlImageClick(event) {
       },
     }
   );
-  instance.onShow();
+  onShow(instance);
 
   function onEscapeButtonEvent(event) {
     window.removeEventListener("keydown", onEscapeButtonEvent);
     // console.log(event.code);
     if (event.code === "Escape") {
-      instance.onClose();
+      onClose(instance);
     }
   }
 }
