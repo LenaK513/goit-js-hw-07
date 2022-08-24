@@ -25,31 +25,31 @@ gallery.insertAdjacentHTML("beforeend", listOfImages);
 gallery.addEventListener("click", onBigUrlImageClick);
 
 function onBigUrlImageClick(event) {
-  // window.addEventListener("keydown", onEscapeButtonEvent);
+  window.addEventListener("keydown", onEscapeButtonEvent);
   event.preventDefault();
 
-  console.dir(event);
+  // console.dir(event);
 
   const instance = basicLightbox.create(
     `
     <img src="${event.target.dataset.source}" >
 `,
     {
-      onShow: () => {
-        window.addEventListener("keydown", onEscapeButtonEvent);
+      onShow: (instance) => {
+        window.addEventListener("click", onEscapeButtonEvent);
       },
     },
     {
-      onClose: () => {
-        window.removeEventListener("keydown", onEscapeButtonEvent);
+      onClose: (instance) => {
+        window.removeEventListener("click", onEscapeButtonEvent);
       },
     }
   );
   instance.show();
 
   function onEscapeButtonEvent(event) {
-    // window.removeEventListener("keydown", onEscapeButtonEvent);
-    console.log(event.code);
+    window.removeEventListener("keydown", onEscapeButtonEvent);
+    // console.log(event.code);
     if (event.code === "Escape") {
       instance.close();
     }
