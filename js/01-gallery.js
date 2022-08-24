@@ -45,7 +45,7 @@ function onBigUrlImageClick(event) {
       },
     }
   );
-  instance.show;
+  instance.show();
 
   function onEscapeButtonEvent(event) {
     window.removeEventListener("keydown", onEscapeButtonEvent);
