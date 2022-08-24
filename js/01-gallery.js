@@ -25,16 +25,25 @@ gallery.insertAdjacentHTML("beforeend", listOfImages);
 gallery.addEventListener("click", onBigUrlImageClick);
 
 function onBigUrlImageClick(event) {
-  window.addEventListener("keydown", onEscapeButtonEvent);
+  // window.addEventListener("keydown", onEscapeButtonEvent);
   event.preventDefault();
 
   console.dir(event);
 
-  const instance = basicLightbox.create(`
+  const instance = basicLightbox
+    .create(
+      `
     <img src="${event.target.dataset.source}" >
-`);
+`,
+      {
+        onShow: (instance) => {
+          window.addEventListener("keydown", onEscapeButtonEvent);
+        },
+      }
+    )
+    .show();
 
-  instance.show();
+  // instance;
 
   function onEscapeButtonEvent(event) {
     window.removeEventListener("keydown", onEscapeButtonEvent);
