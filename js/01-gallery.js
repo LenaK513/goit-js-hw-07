@@ -41,7 +41,7 @@ function onBigUrlImageClick(event) {
     },
     {
       onClose: (instance) => {
-        window.removeEventListener("click", onEscapeButtonEvent);
+        window.removeEventListener("keydown", onEscapeButtonEvent);
       },
     }
   );
