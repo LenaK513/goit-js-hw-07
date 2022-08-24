@@ -25,6 +25,7 @@ gallery.insertAdjacentHTML("beforeend", listOfImages);
 gallery.addEventListener("click", onBigUrlImageClick);
 
 function onBigUrlImageClick(event) {
+  window.addEventListener("keydown", onEscapeButtonEvent);
   event.preventDefault();
 
   console.dir(event);
@@ -33,7 +34,7 @@ function onBigUrlImageClick(event) {
     <img src="${event.target.dataset.source}" >
 `);
 
-  instance.show(window.addEventListener("keydown", onEscapeButtonEvent));
+  instance.show();
 
   function onEscapeButtonEvent(event) {
     window.removeEventListener("keydown", onEscapeButtonEvent);
