@@ -41,9 +41,9 @@ function onBigUrlImageClick(event) {
   event.preventDefault();
 
   console.dir(event.target.dataset.source);
-  if (event.target.nodeName !== "IMG") {
-    return;
-  }
+  // if (event.target.nodeName !== "IMG") {
+  //   return;
+  // }
 
   // instance.element().querySelector("#image-new")=`<img id="image-new" src="${event.target.dataset.sourse}" >`
 
