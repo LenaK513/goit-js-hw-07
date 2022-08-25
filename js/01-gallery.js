@@ -43,7 +43,8 @@ function onBigUrlImageClick(event) {
   if (event.target.nodeName !== "IMG") {
     return;
   }
-  img.src = event.target.dataset.sourse;
+
+  instance.element().querySelector("img").src = event.target.dataset.sourse;
   instance.show();
 }
 
