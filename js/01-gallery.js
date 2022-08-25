@@ -25,9 +25,7 @@ gallery.insertAdjacentHTML("beforeend", listOfImages);
 gallery.addEventListener("click", onBigUrlImageClick);
 
 const instance = basicLightbox.create(
-  `
-    <img class="modal-img" src="" >
-`,
+  `<img src="" >`,
   {
     onShow: (instance) => {
       window.addEventListener("keydown", onEscapeButtonEvent);
@@ -45,8 +43,7 @@ function onBigUrlImageClick(event) {
   if (event.target.nodeName !== "IMG") {
     return;
   }
-  instance.element().querySelector(".modal-img").src =
-    event.target.dataset.sourse;
+  img.src = event.target.dataset.sourse;
   instance.show();
 }
 
