@@ -24,7 +24,7 @@ gallery.insertAdjacentHTML("beforeend", listOfImages);
 gallery.addEventListener("click", onBigUrlImageClick);
 
 const instance = basicLightbox.create(
-  `<img src="" >`,
+  `<img src="#" >`,
   {
     onShow: (instance) => {
       window.addEventListener("keydown", onEscapeButtonEvent);
