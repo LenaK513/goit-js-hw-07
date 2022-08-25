@@ -7,8 +7,7 @@ const listOfElements = (galleryItem) => {
 <a class="gallery__link" href="large-image.jpg">
   <img
     class="gallery__image"
-    
-    src="${galleryItem.preview}"
+   src="${galleryItem.preview}"
     data-source="${galleryItem.original}"
     alt='${galleryItem.description}'
   />
@@ -49,11 +48,8 @@ function onBigUrlImageClick(event) {
 
 function onEscapeButtonEvent(event) {
   event.preventDefault();
-
   if (event.code === "Escape") {
     instance.close();
     return;
   }
 }
-
-//
