@@ -24,7 +24,7 @@ gallery.insertAdjacentHTML("beforeend", listOfImages);
 gallery.addEventListener("click", onBigUrlImageClick);
 
 const instance = basicLightbox.create(
-  `<img src="#" >`,
+  `<img id="image-new" src="#" >`,
   {
     onShow: (instance) => {
       window.addEventListener("keydown", onEscapeButtonEvent);
@@ -43,7 +43,8 @@ function onBigUrlImageClick(event) {
   if (event.target.nodeName !== "IMG") {
     return;
   }
-  instance.element().querySelector("img").src = event.target.dataset.sourse;
+  instance.element().querySelector("#image-new").src =
+    event.target.dataset.sourse;
   console.log(instance.element());
   instance.show();
 }
