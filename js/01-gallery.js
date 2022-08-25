@@ -24,35 +24,44 @@ gallery.insertAdjacentHTML("beforeend", listOfImages);
 
 gallery.addEventListener("click", onBigUrlImageClick);
 
+// function onBigUrlImageClick(event) {
+//   window.addEventListener("keydown", onEscapeButtonEvent);
+//   event.preventDefault();
+
+// console.dir(event);
+
+const instance = basicLightbox.create(
+  `
+    <img class="modal-img" src="" >
+`,
+  {
+    onShow: (instance) => {
+      window.addEventListener("keydown", onEscapeButtonEvent);
+    },
+  },
+  {
+    onClose: (instance) => {
+      window.removeEventListener("keydown", onEscapeButtonEvent);
+    },
+  }
+);
+
 function onBigUrlImageClick(event) {
-  window.addEventListener("keydown", onEscapeButtonEvent);
+  event.preventDefault();
+  if (event.target.nodeName !== "IMG") {
+    return;
+  }
+  instance.element().querySelector("img").src = event.target.dataset.sourse;
+  instance.show();
+}
+
+function onEscapeButtonEvent(event) {
   event.preventDefault();
 
-  // console.dir(event);
-
-  const instance = basicLightbox.create(
-    `
-    <img src="${event.target.dataset.source}" >
-`,
-    {
-      onShow: (instance) => {
-        window.addEventListener("click", onEscapeButtonEvent);
-      },
-    },
-    {
-      onClose: (instance) => {
-        window.removeEventListener("keydown", onEscapeButtonEvent);
-      },
-    }
-  );
-  instance.show();
-
-  function onEscapeButtonEvent(event) {
-    window.removeEventListener("keydown", onEscapeButtonEvent);
-    // console.log(event.code);
-    if (event.code === "Escape") {
-      instance.close();
-    }
+  if (event.code === "Escape") {
+    instance.close();
+    return;
   }
 }
+
 //
