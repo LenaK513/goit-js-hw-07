@@ -46,7 +46,6 @@ function onBigUrlImageClick(event) {
   //   return;
   // }
 
-  // console.log(imgNew);
   instance.show();
 }
 
