@@ -45,7 +45,7 @@ function onBigUrlImageClick(event) {
     return;
   }
 
-  imgEl.src = event.target.dataset.sourse;
+  imgEl.src = event.target.dataset.source;
 
   instance.show();
 }
