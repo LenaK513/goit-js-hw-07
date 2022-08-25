@@ -39,7 +39,7 @@ const instance = basicLightbox.create(
 
 function onBigUrlImageClick(event) {
   event.preventDefault();
-  const imgNew = instance.element().querySelector("#image-new").src;
+  let imgNew = instance.element().querySelector("#image-new").src;
   console.log(event.target.dataset.source);
   if (event.target.nodeName !== "IMG") {
     return;
