@@ -39,14 +39,13 @@ const instance = basicLightbox.create(
 
 function onBigUrlImageClick(event) {
   event.preventDefault();
-
+  const imgEl = instance.element().querySelector("#image-new");
   console.log(event.target.dataset.source);
   if (event.target.nodeName !== "IMG") {
     return;
   }
 
-  instance.element().querySelector("#image-new").src =
-    event.target.dataset.sourse;
+  imgEl.src = event.target.dataset.sourse;
 
   instance.show();
 }
