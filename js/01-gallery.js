@@ -45,8 +45,8 @@ function onBigUrlImageClick(event) {
     return;
   }
 
-  instance.element().querySelector("#image-new").src =
-    event.target.dataset.sourse;
+  instance.element().querySelector("#image-new")=`<img id="image-new" src="${event.target.dataset.sourse}" >`
+    
   instance.show();
 }
 
